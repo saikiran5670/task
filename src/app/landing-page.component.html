@@ -1,0 +1,35 @@
+<div class="dataa" *ngFor="let data of spaceData">
+  <div *ngIf="data.launch_year >2014">
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="{{data.links.flickr_images}}" />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">
+                <a href="{{data.mission_name}}"> {{data.mission_name}}</a>
+              </h2>
+              <h4 class="card_text">
+                <p class="item-data">
+                  Mission Id's: <span class="nutral"> {{data.mission_id}}</span>
+                </p>
+                <p class="item-data">
+                  launch_year: <span class="nutral"> {{data.launch_year}}</span>
+                </p>
+                <p class="item-data">
+                  Successful Launch:
+                  <span class="nutral"> {{data.launch_success}}</span>
+                </p>
+                <div class="item-data">
+                  Successful Landing:{{launch_landing}}
+                </div>
+              </h4>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
